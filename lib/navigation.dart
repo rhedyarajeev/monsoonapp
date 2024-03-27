@@ -22,13 +22,19 @@ class CustomBottomNavigationBar extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) =>  HomePage()));
                     },
-                child: Container(
-                  width: 20,
-                  height: 20,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/home.png"),
-                      fit: BoxFit.contain,
+                child: GestureDetector(
+                    onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) =>  HomePage()));
+                    },
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/home.png"),
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ),

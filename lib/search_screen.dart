@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monsoonapp/navigation.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -48,27 +49,29 @@ class SearchScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: Container(
-          width: 370,
-          height: 50,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(50),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildIcon('assets/images/home.png'),
-              _buildIcon('assets/images/search.png'),
-              _buildIcon('assets/images/love.png'),
-              _buildIcon('assets/images/account.png'),
-            ],
-          ),
-        ),
-      ),
-    );
+        bottomNavigationBar: CustomBottomNavigationBar(),
+      // bottomNavigationBar: Padding(
+      //   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+      //   child: Container(
+      //     width: 370,
+      //     height: 50,
+      //     decoration: BoxDecoration(
+      //       color: Colors.white,
+      //       borderRadius: BorderRadius.circular(50),
+      //     ),
+          // child: Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     _buildIcon('assets/images/home.png'),
+          //     _buildIcon('assets/images/search.png'),
+          //     _buildIcon('assets/images/love.png'),
+          //     _buildIcon('assets/images/account.png'),
+          //   ],
+          // ),
+        );
+        
+      
+    
   }
 
   Widget _buildSearchBar() {
